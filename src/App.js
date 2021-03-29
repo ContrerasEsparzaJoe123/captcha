@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import Recaptcha from 'react-recaptcha';
 import './App.css';
 
 function App() {
+  const validacion = () => {
+    console.log("Respuesta")
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <center>
+      <Recaptcha
+    sitekey="6LfaWpQaAAAAAH8X7L3GDxlQCse4TZIsVBq3UKdN"
+    render="explicit"
+    onloadCallback={validacion}
+  />
+      </center>
+     
     </div>
   );
 }
